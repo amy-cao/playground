@@ -417,6 +417,9 @@ def convert_to_model_input(agent_id, history):
     self_ammo_input = np.zeros([11,11])
 
     passage_input[board_obs==0] = 1
+    passage_input[board_obs==6] = 1
+    passage_input[board_obs==7] = 1
+    passage_input[board_obs==8] = 1
     wall_input[board_obs==1] = 1
     wood_input[board_obs==2] = 1
     self_input[board_obs==agent_id+10] = 1
