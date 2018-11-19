@@ -137,7 +137,7 @@ def decide_reward(prev_node, cur_node):
             pos = (bomb.position[0] + off * direction[0], bomb.position[1] + off * direction[1])
             exit = False
             # If the explosion is blocked, exit early
-            if not utility.position_on_board(prev_board, pos) or :
+            if not utility.position_on_board(prev_board, pos):
                 break
             if utility.position_is_wall(prev_board, pos):
                 exit = True
